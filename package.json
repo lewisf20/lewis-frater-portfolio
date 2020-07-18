@@ -1,0 +1,11 @@
+{
+  "name": "lewis-frater-portfolio",
+  "version": "1.0.0",
+  "description": "This is my portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lewis Frater",
+  "license": "ISC"
+}

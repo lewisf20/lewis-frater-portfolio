@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.996" height="71.995" viewBox="0 0 62.996 71.995">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #297eff;
+      }
+    </style>
+  </defs>
+  <path id="Icon_simple-html5" data-name="Icon simple-html5" class="cls-1" d="M2.25,0h63l-5.73,64.684-25.837,7.31L7.989,64.681ZM23.341,29.248l-.7-8.153L52.82,21.1l.69-7.865-39.525-.009,2.094,24.028H43.455l-.978,10.277-8.729,2.412-8.864-2.43-.564-6.33H16.493l.99,12.512,16.265,4.35L49.884,53.72l2.232-24.469H23.341Z" transform="translate(-2.25)"/>
+</svg>

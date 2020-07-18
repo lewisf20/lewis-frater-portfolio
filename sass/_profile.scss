@@ -1,0 +1,11 @@
+.profile {
+  &__content {
+    grid-column: full-start / col-end 6;
+    background-color: yellow;
+  }
+
+  &__aside {
+    grid-column: col-start 7 / full-end;
+    background-color: orange;
+  }
+}

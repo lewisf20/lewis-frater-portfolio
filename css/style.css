@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 6rem;
+  color: #000;
+  background-color: #fff; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh min-content repeat(2, 40vw) min-content 35rem;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.footer {
+  grid-column: full-start / full-end;
+  background: linear-gradient(to bottom, #297eff, #6c63ff); }
+
+.header {
+  grid-column: full-start / full-end;
+  background: linear-gradient(to bottom, #297eff, #6c63ff); }
+
+.motivation__content {
+  grid-column: col-start 3 / full-end;
+  background-color: yellow; }
+
+.motivation__aside {
+  grid-column: full-start / col-end 2;
+  background-color: orange; }
+
+.profile__content {
+  grid-column: full-start / col-end 6;
+  background-color: yellow; }
+
+.profile__aside {
+  grid-column: col-start 7 / full-end;
+  background-color: orange; }
+
+.projects {
+  grid-column: center-start / center-end;
+  min-height: 40vw;
+  background-color: #eee; }
+
+.skills {
+  grid-column: full-start / full-end;
+  min-height: 60vw;
+  background-color: #ccc; }

@@ -1,0 +1,9 @@
+.footer {
+  grid-column: full-start / full-end;
+
+  background: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}

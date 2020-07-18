@@ -5,4 +5,114 @@
     $color-primary-light,
     $color-primary-dark
   );
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  font-size: 2.2rem;
+
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  grid-template-columns: 1fr 1fr;
+
+  .nav {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    font-weight: 600;
+
+    &__container {
+      margin-right: 8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+
+    &__item {
+      position: relative;
+      margin-right: 5rem;
+      &--active {
+        margin-right: 5rem;
+        border-bottom: 3px solid $font-color-light;
+      }
+    }
+
+    &__item::before {
+      content: '';
+      position: absolute;
+      top: 2.4rem;
+      left: 0;
+      height: 15%;
+      width: 3px;
+      background-color: #fff;
+      transform: scaleY(0);
+      transition: transform 0.8s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s,
+        background-color 0.1s;
+    }
+
+    &__item:hover::before,
+    &__item--active:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &__item:active::before {
+      background-color: $color-primary-light;
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $font-color-light;
+    }
+    .logo {
+      width: 5rem;
+      height: 5rem;
+      background-color: $color-background;
+      clip-path: polygon(50% 41%, 0 100%, 100% 100%);
+      margin-left: 20%;
+    }
+  }
+
+  &__content {
+    grid-column: 1 / 1;
+    position: relative;
+    top: -7rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: start;
+  }
+  &__content-title {
+    color: $font-color-light;
+    letter-spacing: 0.6rem;
+    margin-bottom: 0.5rem;
+    animation: moveInRight 1s ease-out 0s;
+  }
+  &__content-role {
+    color: $font-color-light;
+    letter-spacing: 0.3rem;
+    font-weight: 200;
+    animation: moveInLeft 1s ease-out 0s;
+  }
+  &__content-btn {
+    margin-top: 2.4rem;
+    animation: moveInBottom 1s ease-out 0s;
+  }
+
+  &__img-container {
+    height: 100%;
+    position: relative;
+  }
+
+  &__img-main {
+    position: relative;
+    left: -10%;
+    width: 100%;
+    animation: fazeIn 2s ease-out 0s;
+  }
 }

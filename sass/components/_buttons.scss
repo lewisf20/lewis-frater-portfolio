@@ -1,0 +1,39 @@
+%button {
+  min-width: 10rem;
+  max-width: 22rem;
+  padding: 1.2rem 1.5rem;
+  min-height: 4rem;
+  border-radius: 100px;
+  background: none;
+  box-shadow: 0rem 1rem 4rem rgba($color: #000000, $alpha: 0.2);
+  transition: all 0.2s;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-light {
+    @extend %button;
+    color: $font-color-light;
+    border: 2px solid $font-color-light;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0rem 1rem 4rem rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+
+  &-dark {
+    @extend %button;
+    color: $font-color-dark;
+    border: 2px solid $font-color-dark;
+
+    &:hover {
+      transform: scale(0.95);
+      box-shadow: 0rem 1rem 4rem rgba($color: #000000, $alpha: 0.4);
+    }
+  }
+}

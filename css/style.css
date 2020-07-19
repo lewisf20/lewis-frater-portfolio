@@ -36,6 +36,15 @@
     opacity: 1;
     transform: scale(1); } }
 
+@keyframes spin {
+  0% {
+    transform: scale(1);
+    background-color: #000; }
+  50% {
+    transform: scale(1.5) rotate(360deg); }
+  100% {
+    transform: rotate(720deg) scale(1); } }
+
 *,
 *::before,
 *::after {
@@ -46,6 +55,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 1280px) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -66,10 +78,13 @@ body {
   grid-column: full-start / full-end;
   background: linear-gradient(to bottom, #297eff, #6c63ff);
   clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   display: grid;
   grid-template-rows: 10vh 90vh;
   grid-template-columns: 1fr 1fr; }
+  @media only screen and (max-width: 1280px) {
+    .header {
+      grid-template-rows: 10vh 45vh 45vh; } }
   .header .nav {
     grid-column: 1 / -1;
     display: flex;
@@ -80,15 +95,12 @@ body {
     .header .nav__container {
       margin-right: 8rem;
       display: flex;
+      width: 40rem;
       justify-content: space-between;
       align-items: center;
       list-style: none; }
     .header .nav__item {
-      position: relative;
-      margin-right: 5rem; }
-      .header .nav__item--active {
-        margin-right: 5rem;
-        border-bottom: 3px solid #fff; }
+      position: relative; }
     .header .nav__item::before {
       content: '';
       position: absolute;
@@ -96,24 +108,32 @@ body {
       left: 0;
       height: 15%;
       width: 3px;
-      background-color: #fff;
+      background-color: #000;
       transform: scaleY(0);
       transition: transform 0.8s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s; }
-    .header .nav__item:hover::before, .header .nav__item--active:hover::before {
+    .header .nav__item:hover::before {
       transform: scaleY(1);
       width: 100%; }
     .header .nav__item:active::before {
-      background-color: #297eff; }
+      color: blue; }
     .header .nav__link:link, .header .nav__link:visited {
+      position: relative;
       text-decoration: none;
+      outline: none;
       text-transform: uppercase;
-      color: #fff; }
+      color: #fff;
+      z-index: 5;
+      transition: all 0.2s; }
+    .header .nav__link:active {
+      font-size: 1.4rem; }
     .header .nav .logo {
       width: 5rem;
       height: 5rem;
       background-color: #fff;
-      clip-path: polygon(50% 41%, 0 100%, 100% 100%);
-      margin-left: 20%; }
+      clip-path: polygon(50% 40%, 0 100%, 100% 100%);
+      margin-left: 20%;
+      transform-origin: 50% 80%;
+      animation: spin 2s ease-out 0s; }
   .header__content {
     grid-column: 1 / 1;
     position: relative;
@@ -123,6 +143,14 @@ body {
     justify-content: center;
     align-items: center;
     text-align: start; }
+    @media only screen and (max-width: 1280px) {
+      .header__content {
+        grid-column: 1 / 3;
+        align-items: flex-end; } }
+  @media only screen and (max-width: 1280px) {
+    .header__content-box {
+      text-align: center;
+      margin-bottom: 5rem; } }
   .header__content-title {
     color: #fff;
     letter-spacing: 0.6rem;
@@ -138,10 +166,14 @@ body {
     animation: moveInBottom 1s ease-out 0s; }
   .header__img-container {
     height: 100%;
+    display: flex;
     position: relative; }
+    @media only screen and (max-width: 1280px) {
+      .header__img-container {
+        grid-column: 1 / -1;
+        top: -20%; } }
   .header__img-main {
     position: relative;
-    left: -10%;
     width: 100%;
     animation: fazeIn 2s ease-out 0s; }
 
@@ -192,6 +224,9 @@ body {
   .btn-light:hover {
     transform: scale(0.95);
     box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
+  .btn-light:active {
+    transform: scale(0.9);
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.5); }
 
 .btn-dark {
   color: #000;
@@ -199,3 +234,6 @@ body {
   .btn-dark:hover {
     transform: scale(0.95);
     box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
+  .btn-dark:active {
+    transform: scale(0.9);
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.5); }

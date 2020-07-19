@@ -8,6 +8,10 @@ $font-primary: 'Montserrat', sans-serif;
 $font-color-light: #fff;
 $font-color-dark: #000;
 
+// Breakpoints
+$bp-medium: 1280px;
+$bp-small: 640px;
+
 // CSS reset
 *,
 *::before,
@@ -20,6 +24,9 @@ $font-color-dark: #000;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 }
 
 body {

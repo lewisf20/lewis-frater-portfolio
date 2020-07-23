@@ -17,18 +17,46 @@
 
   &__core {
     grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
     padding-top: 3rem;
+    display: grid;
+    min-height: 60vh;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 40rem));
+    justify-content: center;
+    align-content: center;
+    .card {
+      justify-self: center;
+      min-height: 38rem;
+      min-width: 30rem;
+      max-width: 35rem;
+      margin-top: 2rem;
+      @media screen and (max-width: $bp-small) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .card:nth-child(3) {
+      @media screen and (max-width: 1200px) {
+        grid-column: span 2;
+      }
+      @media screen and (max-width: $bp-small) {
+        grid-column: span 1;
+      }
+    }
   }
 
   &__additional {
+    grid-column: 1 / -1;
+    background-color: coral;
   }
 
   &__title {
     grid-column: 3 / 7;
     display: flex;
+    justify-self: center;
     justify-content: center;
     align-items: center;
     margin-top: 7rem;

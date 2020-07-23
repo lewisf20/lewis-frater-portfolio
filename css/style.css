@@ -114,7 +114,7 @@ body {
 .header {
   grid-column: full-start / full-end;
   background: linear-gradient(to bottom, #297eff, #6c63ff);
-  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   font-size: 1.8rem;
   display: grid;
   grid-template-rows: 10vh 90vh;
@@ -149,7 +149,7 @@ body {
       left: 0;
       height: 15%;
       width: 3px;
-      background-color: goldenrod;
+      background-color: #9ab7ff;
       transform: scaleY(0);
       transition: transform 0.8s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s; }
     .header .nav__item:hover::before {
@@ -253,8 +253,22 @@ body {
 
 .skills {
   grid-column: full-start / full-end;
-  min-height: 60vw;
-  background-color: #ccc; }
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: repeat(8, 1fr); }
+  .skills__core {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem; }
+  .skills__title {
+    grid-column: 3 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem; }
 
 .initials {
   color: #fff;
@@ -265,6 +279,19 @@ body {
 .icon {
   color: #fff;
   font-size: 3rem; }
+
+.heading {
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 6rem;
+  background-image: linear-gradient(to right, #297eff, #6c63ff);
+  letter-spacing: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in; }
+  .heading:hover {
+    transform: skewX(3deg) skewY(3deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn-light, .btn-dark {
   min-width: 10rem;
@@ -300,3 +327,36 @@ body {
   .btn-dark:active {
     transform: scale(0.9);
     box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.5); }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  height: 35rem;
+  margin: 2rem;
+  transition: 0.3s all ease-out;
+  box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.5);
+  background-color: #fff; }
+  .card__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 7rem;
+    background-color: #297eff;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #fff; }
+  .card__content {
+    padding: 2rem;
+    font-size: 1.2rem;
+    text-align: center; }
+  .card__icon {
+    font-size: 8rem;
+    color: #297eff;
+    padding-bottom: 1rem; }
+  .card:hover {
+    cursor: pointer;
+    transform: translateY(-1rem); }

@@ -9,3 +9,24 @@
   color: #fff;
   font-size: 3rem;
 }
+
+.heading {
+  text-transform: uppercase;
+  //color: $color-primary-light;
+  color: transparent;
+  font-size: 6rem;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  letter-spacing: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    transform: skewX(3deg) skewY(3deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(#000000, 0.2);
+  }
+}

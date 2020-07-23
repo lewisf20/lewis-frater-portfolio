@@ -1,11 +1,36 @@
 .skills {
   grid-column: full-start / full-end;
-  min-height: 60vw;
-  background-color: #ccc;
+  min-height: 100vh;
+
+  // background-image: linear-gradient(
+  //     to right bottom,
+  //     rgba($color-primary-light, 0.35),
+  //     rgba($color-primary-dark, 0.35)
+  //   ),
+  //   url('../res/coding-mac.png');
+  // background-size: cover;
+  // clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: repeat(8, 1fr);
 
   &__core {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
   }
 
-  &__additionalc {
+  &__additional {
+  }
+
+  &__title {
+    grid-column: 3 / 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
   }
 }

@@ -6,4 +6,58 @@
     $color-primary-light,
     $color-primary-dark
   );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__links-container {
+    flex: 0.7;
+    border-top: 2px solid #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    font-size: 1rem;
+    margin: 0 0.8rem;
+    text-transform: uppercase;
+    color: $font-color-light;
+  }
+  &__link:hover {
+    opacity: 0.7;
+  }
+
+  &__icon {
+    margin: 0 0.8rem;
+    cursor: pointer;
+  }
+  &__icon:hover {
+    opacity: 0.5;
+  }
+
+  &__copyright {
+    margin-top: 14rem;
+    text-align: center;
+    color: $font-color-light;
+    font-size: 1.6rem;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }

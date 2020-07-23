@@ -77,15 +77,12 @@
     &__link:active {
       font-size: 1.4rem;
     }
+    &__link:hover {
+      opacity: 0.7;
+    }
 
     &__logo {
       margin-left: 15vw;
-      .initials {
-        color: #fff;
-        font-family: 'Bauhaus 93';
-        font-size: 3rem;
-        text-transform: uppercase;
-      }
     }
 
     &__hamburger {

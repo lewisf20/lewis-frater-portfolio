@@ -1,0 +1,20 @@
+.small-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+  height: 15rem;
+
+  border-radius: 1.5rem;
+  box-shadow: $shadow-small;
+
+  &__title {
+    font-size: $font-size-large;
+    font-weight: 300;
+    text-align: center;
+  }
+  &__icon {
+    font-size: 6rem;
+  }
+}

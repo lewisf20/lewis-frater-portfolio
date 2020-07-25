@@ -8,9 +8,25 @@ $color-background: #fff;
 $font-primary: 'Montserrat', sans-serif;
 $font-color-light: #fff;
 $font-color-dark: #000;
+$font-size-default: 1.6rem;
+$font-size-small: 1.2rem;
+$font-size-large: 2.2rem;
+$font-size-largest: 2.8rem;
+
+//shadow
+$shadow-small: 0 0.8rem 4rem
+  rgba(
+    $color: #000000,
+    $alpha: 0.25,
+  );
+$shadow-large: 0 0.8rem 5rem
+  rgba(
+    $color: #000000,
+    $alpha: 0.5,
+  );
 
 // Breakpoints
-$bp-large5: 1280px;
+$bp-large: 1280px;
 $bp-medium: 868px;
 $bp-small: 640px;
 

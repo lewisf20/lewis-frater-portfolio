@@ -15,6 +15,7 @@
   grid-template-rows: min-content min-content;
   grid-template-columns: repeat(8, 1fr);
 
+  // ################# CORE SKILLS STYLING
   &__core {
     grid-column: 1 / -1;
     // display: flex;
@@ -33,9 +34,7 @@
       min-width: 30rem;
       max-width: 35rem;
       margin-top: 2rem;
-      @media screen and (max-width: $bp-small) {
-        margin-bottom: 3rem;
-      }
+      margin-bottom: 3rem;
     }
 
     .card:nth-child(3) {
@@ -48,11 +47,6 @@
     }
   }
 
-  &__additional {
-    grid-column: 1 / -1;
-    background-color: coral;
-  }
-
   &__title {
     grid-column: 3 / 7;
     display: flex;
@@ -60,5 +54,43 @@
     justify-content: center;
     align-items: center;
     margin-top: 7rem;
+  }
+
+  // #######################ADDITIONAL SKILLS STYLING
+  &__additional {
+    grid-column: 1 / -1;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 40rem));
+    gap: 5rem 2rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(2, minmax(20rem, 40rem));
+      gap: 2.5rem 1rem;
+    }
+
+    .small-card {
+      padding: 0.5rem;
+      background: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      color: $font-color-light;
+      transition: all 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-primary-light;
+        background: linear-gradient(to right bottom, #fff, #ccc);
+        transform: scale(1.2);
+        box-shadow: $shadow-large;
+      }
+    }
   }
 }

@@ -284,19 +284,14 @@ body {
       min-height: 38rem;
       min-width: 30rem;
       max-width: 35rem;
-      margin-top: 2rem; }
-      @media screen and (max-width: 640px) {
-        .skills__core .card {
-          margin-bottom: 3rem; } }
+      margin-top: 2rem;
+      margin-bottom: 3rem; }
     @media screen and (max-width: 1200px) {
       .skills__core .card:nth-child(3) {
         grid-column: span 2; } }
     @media screen and (max-width: 640px) {
       .skills__core .card:nth-child(3) {
         grid-column: span 1; } }
-  .skills__additional {
-    grid-column: 1 / -1;
-    background-color: coral; }
   .skills__title {
     grid-column: 3 / 7;
     display: flex;
@@ -304,6 +299,31 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 7rem; }
+  .skills__additional {
+    grid-column: 1 / -1;
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 40rem));
+    gap: 5rem 2rem;
+    justify-items: center;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (max-width: 868px) {
+      .skills__additional {
+        grid-template-columns: repeat(2, minmax(20rem, 40rem));
+        gap: 2.5rem 1rem; } }
+    .skills__additional .small-card {
+      padding: 0.5rem;
+      background: linear-gradient(to right bottom, #297eff, #6c63ff);
+      color: #fff;
+      transition: all 0.5s; }
+      .skills__additional .small-card:hover {
+        cursor: pointer;
+        color: #297eff;
+        background: linear-gradient(to right bottom, #fff, #ccc);
+        transform: scale(1.2);
+        box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.5); }
 
 .initials {
   color: #fff;
@@ -315,7 +335,7 @@ body {
   color: #fff;
   font-size: 3rem; }
 
-.heading {
+.heading-secondary {
   text-transform: uppercase;
   color: transparent;
   font-size: 6rem;
@@ -324,7 +344,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   transition: all 0.3s ease-in; }
-  .heading:hover {
+  .heading-secondary:hover {
     transform: skewX(3deg) skewY(3deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
@@ -395,3 +415,19 @@ body {
   .card:hover {
     cursor: pointer;
     transform: translateY(-1rem); }
+
+.small-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+  height: 15rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.25); }
+  .small-card__title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-align: center; }
+  .small-card__icon {
+    font-size: 6rem; }

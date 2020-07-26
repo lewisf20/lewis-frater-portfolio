@@ -31,9 +31,9 @@
     opacity: 0; }
   20% {
     opacity: 0;
-    transform: scale(0.2); }
+    transform: scale(0.3); }
   70% {
-    transform: scale(1.1); }
+    transform: scale(1.05); }
   100% {
     opacity: 1;
     transform: scale(1); } }
@@ -45,6 +45,35 @@
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+
+@keyframes land {
+  0% {
+    transform: scale(10);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blurIn {
+  0% {
+    filter: blur(4px); }
+  100% {
+    filter: blur(0); } }
+
+@keyframes rotateIn {
+  0% {
+    transform-origin: left;
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(0); } }
 
 *,
 *::before,
@@ -184,7 +213,8 @@ body {
       width: 40rem;
       justify-content: space-between;
       align-items: center;
-      list-style: none; }
+      list-style: none;
+      animation: moveInRight 3s ease-out 0s; }
       @media screen and (max-width: 640px) {
         .header .nav__container {
           display: none;
@@ -221,8 +251,7 @@ body {
     .header .nav__logo {
       margin-left: 15vw;
       cursor: pointer;
-      z-index: 10;
-      animation: spin 2s linear 0s; }
+      z-index: 10; }
     .header .nav__hamburger {
       display: none; }
       @media screen and (max-width: 640px) {
@@ -260,15 +289,15 @@ body {
     color: #fff;
     letter-spacing: 0.6rem;
     margin-bottom: 0.5rem;
-    animation: moveInRight 1s ease-out 0s; }
+    animation: land 2s ease-in 0s; }
   .header__content-role {
     color: #fff;
     letter-spacing: 0.3rem;
     font-weight: 200;
-    animation: moveInLeft 1s ease-out 0s; }
+    animation: blurIn 4s ease-out 0s; }
   .header__content-btn {
     margin-top: 2.4rem;
-    animation: moveInBottom 1s ease-out 0s; }
+    animation: moveInLeft 2s ease-out 0s; }
   .header__img-container {
     height: 100%;
     display: flex;
@@ -280,8 +309,7 @@ body {
   .header__img-main {
     position: relative;
     width: 100%;
-    animation: fazeIn 4s ease-out 0s;
-    -moz-animation-timing-function: ease-in; }
+    animation: moveInRight 3s ease-out 0s; }
 
 .motivation-content {
   grid-column: col-start 3 / full-end;

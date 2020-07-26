@@ -31,6 +31,7 @@
       justify-content: space-between;
       align-items: center;
       list-style: none;
+      animation: moveInRight 3s ease-out 0s;
 
       @media screen and (max-width: $bp-small) {
         display: none;
@@ -85,7 +86,7 @@
       margin-left: 15vw;
       cursor: pointer;
       z-index: 10;
-      animation: spin 2s linear 0s;
+      //animation: spin 2s linear 0s;
     }
 
     &__hamburger {
@@ -134,17 +135,17 @@
     color: $font-color-light;
     letter-spacing: 0.6rem;
     margin-bottom: 0.5rem;
-    animation: moveInRight 1s ease-out 0s;
+    animation: land 2s ease-in 0s;
   }
   &__content-role {
     color: $font-color-light;
     letter-spacing: 0.3rem;
     font-weight: 200;
-    animation: moveInLeft 1s ease-out 0s;
+    animation: blurIn 4s ease-out 0s;
   }
   &__content-btn {
     margin-top: 2.4rem;
-    animation: moveInBottom 1s ease-out 0s;
+    animation: moveInLeft 2s ease-out 0s;
   }
 
   &__img-container {
@@ -160,7 +161,6 @@
   &__img-main {
     position: relative;
     width: 100%;
-    animation: fazeIn 4s ease-out 0s;
-    -moz-animation-timing-function: ease-in;
+    animation: moveInRight 3s ease-out 0s;
   }
 }

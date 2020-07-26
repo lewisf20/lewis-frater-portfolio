@@ -1,80 +1,3 @@
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(0rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20rem); }
-  80% {
-    transform: translateX(-2rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes fazeIn {
-  0% {
-    opacity: 0; }
-  20% {
-    opacity: 0;
-    transform: scale(0.3); }
-  70% {
-    transform: scale(1.05); }
-  100% {
-    opacity: 1;
-    transform: scale(1); } }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  50% {
-    transform: rotate(180deg); }
-  100% {
-    transform: rotate(360deg); } }
-
-@keyframes land {
-  0% {
-    transform: scale(10);
-    opacity: 0; }
-  100% {
-    transform: scale(1);
-    opacity: 1; } }
-
-@keyframes fadeInSlow {
-  0% {
-    opacity: 0; }
-  75% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes blurIn {
-  0% {
-    filter: blur(4px); }
-  100% {
-    filter: blur(0); } }
-
-@keyframes rotateIn {
-  0% {
-    transform-origin: left;
-    transform: rotate(-90deg); }
-  100% {
-    transform: rotate(0); } }
-
 *,
 *::before,
 *::after {
@@ -108,36 +31,6 @@ body {
   @media screen and (max-width: 1280px) {
     .container {
       grid-template-rows: 100vh repeat(6, min-content) 35rem; } }
-
-.initials {
-  color: #fff;
-  font-family: 'Bauhaus 93';
-  font-size: 3rem;
-  text-transform: uppercase; }
-
-.icon {
-  color: #fff;
-  font-size: 3rem; }
-
-.heading-secondary {
-  text-transform: uppercase;
-  color: transparent;
-  font-size: 6rem;
-  background-image: linear-gradient(to right, #297eff, #6c63ff);
-  letter-spacing: 1rem;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: all 0.3s ease-in; }
-  .heading-secondary:hover {
-    transform: skewX(3deg) skewY(3deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.heading-ternary {
-  font-size: 2.2rem;
-  color: #363636; }
-
-.paragraph {
-  font-size: 1.6rem; }
 
 .footer {
   grid-column: full-start / full-end;
@@ -310,6 +203,113 @@ body {
     position: relative;
     width: 100%;
     animation: moveInRight 3s ease-out 0s; }
+
+.initials {
+  color: #fff;
+  font-family: 'Bauhaus 93';
+  font-size: 3rem;
+  text-transform: uppercase; }
+
+.icon {
+  color: #fff;
+  font-size: 3rem; }
+
+.heading-secondary {
+  text-transform: uppercase;
+  color: transparent;
+  font-size: 6rem;
+  background-image: linear-gradient(to right, #297eff, #6c63ff);
+  letter-spacing: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in; }
+  .heading-secondary:hover {
+    transform: skewX(3deg) skewY(3deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-ternary {
+  font-size: 2.2rem;
+  color: #363636; }
+
+.paragraph {
+  font-size: 1.6rem; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(0rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes fazeIn {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0;
+    transform: scale(0.3); }
+  70% {
+    transform: scale(1.05); }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes land {
+  0% {
+    transform: scale(10);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes blurIn {
+  0% {
+    filter: blur(4px); }
+  100% {
+    filter: blur(0); } }
+
+@keyframes rotateIn {
+  0% {
+    transform-origin: left;
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(0); } }
 
 .motivation-content {
   grid-column: col-start 3 / full-end;

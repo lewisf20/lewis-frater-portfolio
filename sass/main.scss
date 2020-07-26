@@ -1,13 +1,19 @@
-@import 'animation';
+// ##### contains base styles & sass variables
 @import 'base';
-@import 'typography';
-@import 'footer';
-@import 'header';
-@import 'motivation';
-@import 'profile';
-@import 'projects';
-@import 'skills';
 
+// ##### styles for sitewide general layout
+@import './layout/footer';
+@import './layout/header';
+@import 'typography';
+@import 'animation';
+
+// ##### styles for index.html
+@import './pages/index/motivation';
+@import './pages/index/profile';
+@import './pages/index/projects';
+@import './pages/index/skills';
+
+// ###### styles for components
 @import './components/button';
 @import './components/card';
 @import './components/small-card';

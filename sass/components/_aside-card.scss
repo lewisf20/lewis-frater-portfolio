@@ -1,0 +1,13 @@
+.aside-card {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 15rem;
+  background: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}

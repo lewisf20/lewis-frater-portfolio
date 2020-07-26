@@ -1,13 +1,15 @@
 @import 'animation';
 @import 'base';
+@import 'typography';
 @import 'footer';
 @import 'header';
 @import 'motivation';
 @import 'profile';
 @import 'projects';
 @import 'skills';
-@import 'typography';
 
 @import './components/button';
 @import './components/card';
 @import './components/small-card';
+@import './components/content-canvas';
+@import './components/aside-card';

@@ -1,11 +1,52 @@
 .profile {
-  &__content {
+  &-content {
     grid-column: full-start / col-end 6;
-    background-color: yellow;
+    margin-left: 4rem;
+    padding-right: 15rem;
+
+    &__svg {
+      width: 12rem;
+    }
+    &__btn,
+    p {
+      grid-column: 2 / span 2;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &__btn {
+      margin-top: 4rem;
+    }
+
+    @media screen and (max-width: $bp-large) {
+      grid-column: col-start 1 / col-end 8;
+      margin-left: 0;
+      margin-bottom: 10rem;
+    }
   }
 
-  &__aside {
+  &-aside {
     grid-column: col-start 7 / full-end;
-    background-color: orange;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    &__title {
+      color: $font-color-light;
+      font-size: $font-size-largest;
+      padding: 4rem;
+      text-align: center;
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: $bp-large) {
+      grid-column: col-start 1 / col-end 8;
+      border-radius: 20px;
+      max-width: 90rem;
+      align-self: center;
+      justify-self: center;
+    }
   }
 }

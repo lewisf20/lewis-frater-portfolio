@@ -32,8 +32,8 @@
 
   &-dark {
     @extend %button;
-    color: $font-color-dark;
-    border: 2px solid $font-color-dark;
+    color: $color-primary-light;
+    border: 2px solid $color-primary-light;
 
     &:hover {
       transform: scale(0.95);

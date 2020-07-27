@@ -1,5 +1,7 @@
 .footer {
   grid-column: full-start / full-end;
+  height: 35rem;
+  margin-top: 15rem;
 
   background: linear-gradient(
     to bottom,
@@ -10,6 +12,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: $bp-small) {
+    height: 45rem;
+  }
 
   &__links-container {
     flex: 0.7;

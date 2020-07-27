@@ -47,6 +47,11 @@
       gap: 2.5rem 1rem;
     }
 
+    @media screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(1, minmax(20rem, 40rem));
+      margin-bottom: 8rem;
+    }
+
     .small-card {
       padding: 0.5rem;
       background: linear-gradient(

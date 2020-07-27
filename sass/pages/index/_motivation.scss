@@ -2,7 +2,7 @@
   &-content {
     grid-column: col-start 3 / full-end;
     margin-right: 4rem;
-    padding-left: 15rem;
+    padding: 2rem 10rem;
 
     &__svg {
       width: 12rem;
@@ -25,7 +25,18 @@
       margin-right: 0;
       margin-bottom: 10rem;
       padding-left: 0;
-      padding-right: 15rem;
+      padding: 4rem 12rem;
+      &__btn,
+      p {
+        grid-column: 1 / span 3;
+      }
+      &__btn {
+        margin-top: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: $bp-small) {
+      padding: 1rem 2.8rem;
     }
   }
 

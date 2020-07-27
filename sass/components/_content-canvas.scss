@@ -5,4 +5,8 @@
   gap: 3rem;
   justify-items: flex-start;
   align-items: center;
+
+  @media screen and (max-width: $bp-small) {
+    gap: 2rem;
+  }
 }

@@ -229,7 +229,8 @@ body {
   color: #363636; }
 
 .paragraph {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 3.2rem; }
 
 @keyframes moveInLeft {
   0% {
@@ -307,6 +308,16 @@ body {
     transform: rotate(-90deg); }
   100% {
     transform: rotate(0); } }
+
+.u-bold {
+  color: #297eff;
+  font-weight: 700; }
+
+.u-abbrev {
+  color: #297eff;
+  font-weight: 700;
+  border-bottom: 1px dotted #000;
+  cursor: default; }
 
 .container {
   display: grid;

@@ -1,0 +1,14 @@
+// ##### ###### UTILITY CLASSES ##### #####
+
+// ##### Span styling for text
+.u-bold {
+  color: $color-primary-light;
+  font-weight: 700;
+}
+
+.u-abbrev {
+  color: $color-primary-light;
+  font-weight: 700;
+  border-bottom: 1px dotted #000;
+  cursor: default;
+}

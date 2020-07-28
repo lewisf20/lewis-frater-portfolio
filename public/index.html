@@ -15,15 +15,21 @@
     <title>Lewis Frater | Portfolio</title>
   </head>
   <body class="container">
-    <header class="header">
+    <header class="index-header">
       <nav class="nav">
         <div class="nav__logo">
           <span class="initials">lcf</span>
         </div>
         <ul class="nav__container">
-          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Projects</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          <li class="nav__item">
+            <a href="index.html" class="nav__link nav__link--active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="projects.html" class="nav__link">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
         </ul>
         <div class="nav__hamburger">
           <div class="line"></div>
@@ -31,18 +37,22 @@
           <div class="line"></div>
         </div>
       </nav>
-      <div class="header__content">
-        <div class="header__content-box">
-          <h1 class="header__content-title" id="name">Lewis Frater</h1>
-          <h2 class="header__content-role" id="role">Junior Web Developer</h2>
-          <button class="header__content-btn btn-light">Learn More</button>
+      <div class="index-header__content">
+        <div class="index-header__content-box">
+          <h1 class="index-header__content-title" id="name">Lewis Frater</h1>
+          <h2 class="index-header__content-role" id="role">
+            Junior Web Developer
+          </h2>
+          <button class="index-header__content-btn btn-light">
+            Learn More
+          </button>
         </div>
       </div>
-      <div class="header__img-container">
+      <div class="index-header__img-container">
         <img
           src="./res/hero.svg"
           alt="Person and webpage with HTML opening and closing tags"
-          class="header__img-main"
+          class="index-header__img-main"
         />
       </div>
     </header>
@@ -243,5 +253,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,13 +1,28 @@
 .initials {
-  color: #fff;
+  color: $font-color-light;
   font-family: 'Bauhaus 93';
   font-size: 3rem;
   text-transform: uppercase;
 }
 
 .icon {
-  color: #fff;
+  color: $font-color-light;
   font-size: 3rem;
+}
+
+.icon-cta {
+  color: transparent;
+  font-size: 6rem;
+  background-image: linear-gradient(to bottom, #fff, #bbb);
+  letter-spacing: 0.5rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.heading-cta {
+  color: $font-color-light;
+  font-size: 5.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .heading-secondary {
@@ -27,13 +42,13 @@
 
   &:hover {
     transform: skewX(3deg) skewY(3deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(#000000, 0.2);
+    text-shadow: $shadow-large;
   }
 }
 
 .heading-ternary {
   font-size: $font-size-large;
-  color: rgb(54, 54, 54);
+  color: $font-color-dark;
 }
 
 .paragraph {

@@ -1,4 +1,4 @@
-.header {
+.index-header {
   grid-column: full-start / full-end;
   background: linear-gradient(
     to bottom,
@@ -6,7 +6,6 @@
     $color-primary-dark
   );
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  font-size: 1.8rem;
 
   display: grid;
   grid-template-rows: 10vh 90vh;
@@ -69,6 +68,6 @@
   &__img-main {
     position: relative;
     width: 100%;
-    animation: moveInRight 3s ease-out 0s;
+    animation: moveInBottom 3s ease-out 0s;
   }
 }

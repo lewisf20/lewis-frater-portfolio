@@ -6,6 +6,7 @@
 
   width: 100%;
   font-weight: 600;
+  font-size: $font-size-default;
 
   &__container {
     margin-right: 8rem;
@@ -14,7 +15,6 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    animation: moveInRight 3s ease-out 0s;
 
     @media screen and (max-width: $bp-small) {
       display: none;
@@ -40,12 +40,8 @@
   }
 
   &__item:hover::before {
-    transform: scaleY(1);
+    transform: scaleY(2);
     width: 100%;
-  }
-
-  &__item:active::before {
-    color: blue;
   }
 
   &__link:link,
@@ -56,13 +52,18 @@
     text-transform: uppercase;
     color: $font-color-light;
     z-index: 5;
-    transition: all 0.2s;
+    transition: all 0.5s;
+  }
+
+  &__link--active {
+    border-bottom: 4px solid $color-secondary;
   }
   &__link:active {
     font-size: 1.4rem;
   }
   &__link:hover {
-    opacity: 0.7;
+    opacity: 0.85;
+    box-shadow: 0 3rem 8rem rgba($color: $color-secondary, $alpha: 0.5);
   }
 
   &__logo {

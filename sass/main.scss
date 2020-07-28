@@ -3,18 +3,27 @@
 
 // ##### styles for sitewide general layout
 @import './layout/footer';
-@import './layout/header';
 @import './layout/navigation';
+@import './layout/container';
 @import 'typography';
 @import 'animation';
 @import 'utility';
 
 // ##### styles for index.html
-@import './layout/index';
+
+@import './pages/index/header';
 @import './pages/index/motivation';
 @import './pages/index/profile';
 @import './pages/index/projects';
 @import './pages/index/skills';
+
+// ##### styles for contact.html
+
+@import './pages/contact/header';
+
+// ##### styles for projects.html
+
+@import './pages/projects/header';
 
 // ###### styles for components
 @import './components/button';

@@ -1,0 +1,16 @@
+.projects-header {
+  grid-column: full-start / full-end;
+  background: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+  display: grid;
+  grid-template-rows: 10vh 50vh;
+  grid-template-columns: 1fr 1fr;
+  @media only screen and (max-width: 890px) {
+    grid-template-rows: 10vh 45vh 45vh;
+  }
+}

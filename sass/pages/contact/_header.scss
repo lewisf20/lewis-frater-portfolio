@@ -1,0 +1,19 @@
+.contact-header {
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-rows: 10vh 90vh;
+  place-items: center;
+  background: url(../res/contact-bg.svg);
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__img {
+    width: 100%;
+  }
+}

@@ -525,8 +525,19 @@ body {
     .projects-header {
       grid-template-rows: 10vh 45vh 45vh; } }
 
+.cv-header {
+  grid-column: full-start / full-end;
+  background: linear-gradient(to bottom, #297eff, #6c63ff);
+  display: grid;
+  grid-template-rows: 10vh 50vh;
+  grid-template-columns: 1fr 1fr; }
+  @media only screen and (max-width: 890px) {
+    .cv-header {
+      grid-template-rows: 10vh 45vh 45vh; } }
+
 .btn-light, .btn-dark {
   min-width: 10rem;
+  display: inline-block;
   max-width: 22rem;
   padding: 1.2rem 1.5rem;
   min-height: 4rem;
@@ -535,8 +546,11 @@ body {
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.2);
   transition: all 0.2s;
   font-size: 1.8rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
   outline: none;
   cursor: pointer; }
 

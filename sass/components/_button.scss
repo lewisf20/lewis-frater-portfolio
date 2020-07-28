@@ -1,5 +1,6 @@
 %button {
   min-width: 10rem;
+  display: inline-block;
   max-width: 22rem;
   padding: 1.2rem 1.5rem;
   min-height: 4rem;
@@ -8,8 +9,11 @@
   box-shadow: 0rem 1rem 4rem rgba($color: #000000, $alpha: 0.2);
   transition: all 0.2s;
   font-size: 1.8rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 1px;
   outline: none;
   cursor: pointer;
 }

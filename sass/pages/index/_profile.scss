@@ -1,4 +1,9 @@
 .profile {
+  &-content,
+  &-aside {
+    margin-top: 15rem;
+  }
+
   &-content {
     grid-column: full-start / col-end 6;
     margin-left: 4rem;

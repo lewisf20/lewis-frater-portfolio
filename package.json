@@ -4,8 +4,8 @@
   "description": "This is my portfolio website",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=firefox",
+    "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
+    "devserver": "live-server --open=public --browser=firefox",
     "start": "npm-run-all --parallel devserver watch:sass"
   },
   "author": "Lewis Frater",

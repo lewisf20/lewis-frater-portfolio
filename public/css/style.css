@@ -153,6 +153,12 @@ body {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.header {
+  grid-column: full-start / full-end;
+  background: linear-gradient(to bottom, #297eff, #6c63ff);
+  display: grid;
+  grid-template-rows: 10vh 90vh; }
+
 .initials {
   color: #eee;
   font-family: 'Bauhaus 93';
@@ -284,17 +290,13 @@ body {
   border-bottom: 1px dotted #000;
   cursor: default; }
 
-.index-header {
-  grid-column: full-start / full-end;
-  background: linear-gradient(to bottom, #297eff, #6c63ff);
+.header-index {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  display: grid;
-  grid-template-rows: 10vh 90vh;
   grid-template-columns: 1fr 1fr; }
   @media only screen and (max-width: 890px) {
-    .index-header {
+    .header-index {
       grid-template-rows: 10vh 45vh 45vh; } }
-  .index-header__content {
+  .header-index__content {
     grid-column: 1 / 1;
     position: relative;
     top: -7rem;
@@ -305,37 +307,37 @@ body {
     text-align: start;
     margin-left: 2rem; }
     @media only screen and (max-width: 890px) {
-      .index-header__content {
+      .header-index__content {
         grid-column: 1 / 3;
         align-items: flex-end; } }
   @media only screen and (max-width: 890px) {
-    .index-header__content-box {
+    .header-index__content-box {
       text-align: center;
       margin-bottom: 10rem; } }
-  .index-header__content-title {
+  .header-index__content-title {
     color: #eee;
     font-size: 5.5rem;
     letter-spacing: 0.6rem;
     margin-bottom: 0.5rem;
     animation: land 2s ease-in 0s; }
-  .index-header__content-role {
+  .header-index__content-role {
     color: #eee;
     font-size: 4rem;
     letter-spacing: 0.3rem;
     font-weight: 200;
     animation: blurIn 4s ease-out 0s; }
-  .index-header__content-btn {
+  .header-index__content-btn {
     margin-top: 2.4rem;
     animation: moveInLeft 2s ease-out 0s; }
-  .index-header__img-container {
+  .header-index__img-container {
     height: 100%;
     display: flex;
     position: relative; }
     @media only screen and (max-width: 890px) {
-      .index-header__img-container {
+      .header-index__img-container {
         grid-column: 1 / -1;
         top: -20%; } }
-  .index-header__img-main {
+  .header-index__img-main {
     position: relative;
     width: 100%;
     animation: moveInBottom 3s ease-out 0s; }
@@ -499,41 +501,56 @@ body {
         transform: scale(1.2);
         box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.5); }
 
-.contact-header {
-  grid-column: full-start / full-end;
-  display: grid;
-  grid-template-rows: 10vh 90vh;
+.header-contact {
   place-items: center;
   background: url(../res/contact-bg.svg);
   background-position: center;
   background-size: cover; }
-  .contact-header__content {
+  .header-contact__container {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    margin-top: 10rem; }
+  .header-contact__content {
+    display: flex;
+    place-items: flex-end;
+    place-content: center; }
+  .header-contact__img {
+    width: 25%;
+    margin: 0 1rem;
+    border-bottom: 5px solid #6c63ff; }
+  .header-contact img:nth-last-child(1) {
+    transform: scaleX(-1) translateY(-1px); }
+  .header-contact__title {
+    margin-bottom: 2rem; }
+
+.socials {
+  grid-column: col-start 1 / col-end 8;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 60rem;
+  margin-top: 15rem;
+  text-align: left; }
+  .socials__link:link, .socials__link:visited {
+    text-decoration: none;
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: #3d3d3d;
+    padding: 0.5rem 0.8rem;
+    transition: 0.1s ease-in; }
+    .socials__link:link > span, .socials__link:visited > span {
+      color: #3d3d3d; }
+  .socials > .socials__link:not(:last-child) {
+    margin-bottom: 2.2rem; }
+  .socials__link:hover {
+    background-color: #6c63ff;
+    color: #eee;
+    border-radius: 10px; }
+  .socials__title {
+    font-size: 4.8rem;
+    margin-bottom: 4rem;
     text-align: center; }
-  .contact-header__img {
-    width: 100%; }
-
-.projects-header {
-  grid-column: full-start / full-end;
-  background: linear-gradient(to bottom, #297eff, #6c63ff);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  display: grid;
-  grid-template-rows: 10vh 50vh;
-  grid-template-columns: 1fr 1fr; }
-  @media only screen and (max-width: 890px) {
-    .projects-header {
-      grid-template-rows: 10vh 45vh 45vh; } }
-
-.cv-header {
-  grid-column: full-start / full-end;
-  background: linear-gradient(to bottom, #297eff, #6c63ff);
-  display: grid;
-  grid-template-rows: 10vh 50vh;
-  grid-template-columns: 1fr 1fr; }
-  @media only screen and (max-width: 890px) {
-    .cv-header {
-      grid-template-rows: 10vh 45vh 45vh; } }
 
 .btn-light, .btn-dark {
   min-width: 10rem;
@@ -642,3 +659,61 @@ body {
   align-items: center;
   margin-bottom: 15rem;
   background: linear-gradient(to bottom, #297eff, #6c63ff); }
+
+.contact-form {
+  width: 55rem;
+  height: 70rem;
+  background-color: #fff;
+  border: 2px solid #297eff;
+  border-radius: 5px;
+  box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.25);
+  padding: 2rem 0; }
+  .contact-form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 5rem;
+    width: 100%;
+    height: 100%; }
+  .contact-form div:nth-child(3) {
+    margin-bottom: 4.5rem; }
+  .contact-form__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    color: #297eff;
+    font-size: 1.6rem;
+    font-weight: 600; }
+    .contact-form__box label {
+      margin-bottom: 1rem; }
+    .contact-form__box input {
+      height: 3rem;
+      width: 80%;
+      padding: 2rem 2rem;
+      font-size: 1.6rem;
+      font-family: "Montserrat", sans-serif;
+      border: none;
+      border-bottom: 3px solid #297eff;
+      transition: 0.5s ease; }
+      .contact-form__box input:focus {
+        background-color: #eee;
+        border: 3px solid #297eff;
+        border-radius: 10px;
+        width: 100%; }
+    .contact-form__box textarea {
+      border: 2px solid #297eff;
+      font-family: "Montserrat", sans-serif;
+      border-radius: 15px;
+      padding: 1rem;
+      width: 100%;
+      height: 6rem;
+      transition: 0.5s ease; }
+      .contact-form__box textarea:focus {
+        background-color: #eee;
+        height: 12rem; }
+  .contact-form__btn {
+    align-self: center;
+    padding: 0 3rem; }

@@ -1,19 +1,31 @@
-.contact-header {
-  grid-column: full-start / full-end;
+.header {
+  &-contact {
+    place-items: center;
+    background: url(../res/contact-bg.svg);
+    background-position: center;
+    background-size: cover;
 
-  display: grid;
-  grid-template-rows: 10vh 90vh;
-  place-items: center;
-  background: url(../res/contact-bg.svg);
-  background-position: center;
-  background-size: cover;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  &__img {
-    width: 100%;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 10rem;
+    }
+    &__content {
+      display: flex;
+      place-items: flex-end;
+      place-content: center;
+    }
+    &__img {
+      width: 25%;
+      margin: 0 1rem;
+      border-bottom: 5px solid $color-primary-dark;
+    }
+    img:nth-last-child(1) {
+      transform: scaleX(-1) translateY(-1px);
+    }
+    &__title {
+      margin-bottom: 2rem;
+    }
   }
 }

@@ -1,0 +1,37 @@
+.socials {
+  grid-column: col-start 1 / col-end 8;
+  justify-self: center;
+
+  display: flex;
+  flex-direction: column;
+  height: 60rem;
+  margin-top: 15rem;
+  text-align: left;
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: $font-color-dark;
+    padding: 0.5rem 0.8rem;
+    transition: 0.1s ease-in;
+
+    & > span {
+      color: $font-color-dark;
+    }
+  }
+  & > &__link:not(:last-child) {
+    margin-bottom: 2.2rem;
+  }
+  &__link:hover {
+    background-color: $color-primary-dark;
+    color: $font-color-light;
+    border-radius: 10px;
+  }
+  &__title {
+    font-size: 4.8rem;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+}

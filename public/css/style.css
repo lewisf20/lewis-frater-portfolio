@@ -98,36 +98,32 @@ body {
       .nav__container {
         display: none;
         position: relative; } }
-  .nav__item {
-    position: relative; }
-  .nav__item::before {
-    content: '';
-    position: absolute;
-    top: 2.4rem;
-    left: 0;
-    height: 15%;
-    width: 3px;
-    background-color: #9ab7ff;
-    transform: scaleY(0);
-    transition: transform 0s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.1s, background-color 0.1s; }
-  .nav__item:hover::before {
-    transform: scaleY(2);
-    width: 100%; }
   .nav__link:link, .nav__link:visited {
     position: relative;
     text-decoration: none;
     outline: none;
     text-transform: uppercase;
     color: #eee;
-    z-index: 5;
+    padding: 0.8rem;
     transition: all 0.5s; }
   .nav__link--active {
-    border-bottom: 4px solid #9ab7ff; }
-  .nav__link:active {
-    font-size: 1.4rem; }
+    text-transform: lowercase !important;
+    box-shadow: 0 10rem 8rem rgba(154, 183, 255, 0.3); }
   .nav__link:hover {
-    opacity: 0.85;
-    box-shadow: 0 3rem 8rem rgba(154, 183, 255, 0.5); }
+    box-shadow: 0 10rem 8rem rgba(154, 183, 255, 0.3); }
+  .nav__link:before {
+    position: absolute;
+    content: '';
+    left: 9%;
+    bottom: 5px;
+    width: 85%;
+    height: 2px;
+    background-color: #9ab7ff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: all 0.4s cubic-bezier(0.1, 0, 0, 0.5); }
+  .nav__link:hover:before {
+    transform: scaleX(1); }
   .nav__logo {
     margin-left: 15vw;
     cursor: pointer;
@@ -519,6 +515,9 @@ body {
     width: 25%;
     margin: 0 1rem;
     border-bottom: 5px solid #6c63ff; }
+    @media screen and (max-width: 640px) {
+      .header-contact__img {
+        display: none; } }
   .header-contact img:nth-last-child(1) {
     transform: scaleX(-1) translateY(-1px); }
   .header-contact__title {
@@ -539,6 +538,9 @@ body {
     color: #3d3d3d;
     padding: 0.5rem 0.8rem;
     transition: 0.1s ease-in; }
+    @media screen and (max-width: 640px) {
+      .socials__link:link, .socials__link:visited {
+        font-size: 2.6rem; } }
     .socials__link:link > span, .socials__link:visited > span {
       color: #3d3d3d; }
   .socials > .socials__link:not(:last-child) {

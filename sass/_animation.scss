@@ -124,3 +124,12 @@
     transform: scaleX(-1) translateX(0);
   }
 }
+
+@keyframes fromTop {
+  0% {
+    transform: translateY(-30rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

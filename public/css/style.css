@@ -284,6 +284,12 @@ body {
   100% {
     transform: scaleX(-1) translateX(0); } }
 
+@keyframes fromTop {
+  0% {
+    transform: translateY(-30rem); }
+  100% {
+    transform: translateX(0); } }
+
 .u-bold {
   font-weight: 700; }
 
@@ -556,6 +562,12 @@ hr {
   place-items: center;
   justify-content: center;
   gap: 1rem; }
+  .personal-profile h1 {
+    animation: fromTop 2s ease; }
+  .personal-profile__img {
+    animation: fromTop 2.3s ease; }
+  .personal-profile i {
+    animation: fadeInSlow 2.5s ease; }
   .personal-profile__title {
     margin-top: 8rem;
     margin-bottom: 2.5rem; }

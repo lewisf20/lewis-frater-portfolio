@@ -542,37 +542,6 @@ hr {
   .header-contact__title {
     margin-bottom: 2rem; }
 
-.socials {
-  grid-column: col-start 1 / col-end 8;
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  height: 60rem;
-  margin-top: 15rem;
-  text-align: left; }
-  .socials__link:link, .socials__link:visited {
-    text-decoration: none;
-    font-size: 3.6rem;
-    font-weight: 300;
-    color: #3d3d3d;
-    padding: 0.5rem 0.8rem;
-    transition: 0.1s ease-in; }
-    @media screen and (max-width: 640px) {
-      .socials__link:link, .socials__link:visited {
-        font-size: 2.6rem; } }
-    .socials__link:link > span, .socials__link:visited > span {
-      color: #3d3d3d; }
-  .socials > .socials__link:not(:last-child) {
-    margin-bottom: 2.2rem; }
-  .socials__link:hover {
-    background-color: #6c63ff;
-    color: #eee;
-    border-radius: 10px; }
-  .socials__title {
-    font-size: 4.8rem;
-    margin-bottom: 4rem;
-    text-align: center; }
-
 .header-cv {
   clip-path: polygon(0 1%, 100% 0, 100% 33%, 0 66%); }
 
@@ -631,17 +600,45 @@ hr {
 .key-skills {
   grid-column: center-start / center-end;
   font-size: 1.6rem;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; }
   .key-skills__box {
-    margin: 0 3rem; }
+    margin: 2rem 3rem; }
     .key-skills__box h2 {
       margin-bottom: 2.5rem; }
   .key-skills__list {
     list-style: none; }
     .key-skills__list li {
       margin: 2rem 0; }
+
+.experience {
+  grid-column: center-start / center-end;
+  place-self: center;
+  width: 80%;
+  font-size: 1.6rem; }
+  .experience__occupation {
+    margin-bottom: 2.5rem; }
+  .experience__achievements {
+    list-style: none; }
+    .experience__achievements li {
+      margin: 2rem; }
+  .experience h2 {
+    text-align: center;
+    margin-bottom: 4rem; }
+  .experience h3:nth-child(3) {
+    margin-bottom: 2.5rem; }
+  .experience p {
+    margin-bottom: 2.5rem; }
+
+.references {
+  grid-column: center-start / center-end;
+  place-self: center;
+  text-align: center; }
+  .references__title {
+    font-size: 3.6rem;
+    margin-bottom: 2.5rem; }
 
 .btn-light, .btn-dark {
   min-width: 10rem;
@@ -651,7 +648,7 @@ hr {
   min-height: 4rem;
   border-radius: 100px;
   background: none;
-  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
   font-size: 1.8rem;
   font-weight: 400;
@@ -667,20 +664,20 @@ hr {
   border: 2px solid #eee; }
   .btn-light:hover {
     transform: scale(0.95);
-    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.3); }
   .btn-light:active {
     transform: scale(0.9);
-    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
 
 .btn-dark {
   color: #297eff;
   border: 2px solid #297eff; }
   .btn-dark:hover {
     transform: scale(0.95);
-    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.3); }
   .btn-dark:active {
     transform: scale(0.9);
-    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
 
 .card {
   display: flex;
@@ -730,6 +727,37 @@ hr {
     text-align: center; }
   .small-card__icon {
     font-size: 6rem; }
+
+.socials {
+  grid-column: col-start 1 / col-end 8;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  height: 60rem;
+  margin-top: 15rem;
+  text-align: left; }
+  .socials__link:link, .socials__link:visited {
+    text-decoration: none;
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: #3d3d3d;
+    padding: 0.5rem 0.8rem;
+    transition: 0.1s ease-in; }
+    @media screen and (max-width: 640px) {
+      .socials__link:link, .socials__link:visited {
+        font-size: 2.6rem; } }
+    .socials__link:link > span, .socials__link:visited > span {
+      color: #3d3d3d; }
+  .socials > .socials__link:not(:last-child) {
+    margin-bottom: 2.2rem; }
+  .socials__link:hover {
+    background-color: #6c63ff;
+    color: #eee;
+    border-radius: 10px; }
+  .socials__title {
+    font-size: 4.8rem;
+    margin-bottom: 4rem;
+    text-align: center; }
 
 .content-canvas {
   display: grid;

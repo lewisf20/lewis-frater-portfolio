@@ -21,7 +21,6 @@
 // ##### styles for contact.html
 
 @import './pages/contact/header';
-@import './pages/contact/socials';
 
 // ##### styles for projects.html
 
@@ -33,11 +32,14 @@
 @import './pages/cv/personal-profile';
 @import './pages/cv/education';
 @import './pages/cv/key-skills';
+@import './pages/cv/experience';
+@import './pages/cv/references';
 
 // ###### styles for components
 @import './components/button';
 @import './components/card';
 @import './components/small-card';
+@import './components/socials';
 @import './components/content-canvas';
 @import './components/aside-card';
 @import './components/contact-form';

@@ -1,0 +1,9 @@
+.references {
+  grid-column: center-start / center-end;
+  place-self: center;
+  text-align: center;
+  &__title {
+    font-size: 3.6rem;
+    margin-bottom: 2.5rem;
+  }
+}

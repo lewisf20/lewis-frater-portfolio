@@ -44,13 +44,7 @@
 @keyframes fazeIn {
   0% {
     opacity: 0;
-  }
-  20% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  70% {
-    transform: scale(1.05);
+    transform: scale(0.1);
   }
   100% {
     opacity: 1;
@@ -110,5 +104,23 @@
 
   100% {
     transform: rotate(0);
+  }
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-30rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: scaleX(-1) translateX(-30rem);
+  }
+  100% {
+    transform: scaleX(-1) translateX(0);
   }
 }

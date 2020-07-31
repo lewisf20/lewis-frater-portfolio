@@ -1,0 +1,19 @@
+.key-skills {
+  grid-column: center-start / center-end;
+  font-size: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  &__box {
+    margin: 0 3rem;
+    h2 {
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__list {
+    list-style: none;
+    li {
+      margin: 2rem 0;
+    }
+  }
+}

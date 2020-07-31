@@ -2,6 +2,10 @@
 
 // ##### Span styling for text
 .u-bold {
+  font-weight: 700;
+}
+
+.u-bold-primary {
   color: $color-primary-light;
   font-weight: 700;
 }
@@ -10,5 +14,12 @@
   color: $color-primary-light;
   font-weight: 700;
   border-bottom: 1px dotted #000;
-  cursor: default;
+  cursor: help;
+}
+
+hr {
+  border: 2px solid $color-primary-light;
+  width: 80%;
+  margin: 8rem;
+  max-width: 100rem;
 }

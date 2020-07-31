@@ -20,12 +20,15 @@
       width: 25%;
       margin: 0 1rem;
       border-bottom: 5px solid $color-primary-dark;
+      animation: fromLeft 2s ease;
+
       @media screen and (max-width: $bp-small) {
         display: none;
       }
     }
     img:nth-last-child(1) {
       transform: scaleX(-1) translateY(-1px);
+      animation: fromRight 2s ease;
     }
     &__title {
       margin-bottom: 2rem;

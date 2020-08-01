@@ -2,13 +2,14 @@
 @import 'base';
 
 // ##### styles for sitewide general layout
+@import 'typography';
+@import 'animation';
+@import 'utility';
+
 @import './layout/footer';
 @import './layout/navigation';
 @import './layout/container';
 @import './layout/header';
-@import 'typography';
-@import 'animation';
-@import 'utility';
 
 // ##### styles for index.html
 

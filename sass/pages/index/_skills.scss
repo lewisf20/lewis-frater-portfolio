@@ -28,6 +28,24 @@
     justify-content: center;
     align-items: center;
     margin-top: 7rem;
+
+    text-transform: uppercase;
+    color: transparent;
+    font-size: 6rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    letter-spacing: 0.5rem;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: skewX(3deg) skewY(3deg) scale(1.1);
+      text-shadow: $shadow-large;
+    }
   }
 
   // #######################ADDITIONAL SKILLS STYLING

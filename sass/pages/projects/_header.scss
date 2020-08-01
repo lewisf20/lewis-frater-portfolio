@@ -1,4 +1,24 @@
 .header {
   &-projects {
+    background: none;
+
+    &__hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: -20rem;
+
+      h1 {
+        margin-bottom: 5rem;
+      }
+    }
+    nav {
+      background: linear-gradient(
+        to bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+    }
   }
 }

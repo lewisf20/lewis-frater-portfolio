@@ -1,0 +1,86 @@
+.project {
+  grid-column: full-start / full-end;
+  text-align: center;
+  margin-top: -12rem;
+
+  &__container {
+    display: flex;
+    text-align: left;
+
+    &-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      img {
+        margin-top: 3rem;
+        border-radius: 40px;
+      }
+    }
+    &-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 2.5rem;
+    }
+  }
+  &__technologies {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  &__icons-list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 100%;
+    gap: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .icon {
+      color: $color-primary-light;
+      font-size: 2rem;
+      padding: 1.4rem;
+    }
+    li {
+      font-size: $font-size-default;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__buttons-wrapper {
+    .view-btn:nth-child(1) {
+      margin-right: 8vw;
+    }
+  }
+
+  .view-btn:link,
+  .view-btn:visited {
+    position: relative;
+    color: $color-primary-light;
+    font-size: $font-size-default;
+    text-decoration: none;
+    align-self: flex-end;
+    transition: 0.2s;
+    &:hover {
+      color: $color-primary-dark;
+      font-weight: 500;
+    }
+  }
+
+  h1 {
+    margin-bottom: 4rem;
+  }
+  h2 {
+    margin-bottom: 2rem;
+  }
+  h3 {
+    margin-bottom: 2rem;
+  }
+  p {
+    margin-bottom: 1.8rem;
+  }
+}

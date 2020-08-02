@@ -13,6 +13,12 @@
         margin-bottom: 5rem;
       }
     }
+    &__img {
+      width: 40rem;
+      @media screen and (max-width: $bp-small) {
+        width: 25rem;
+      }
+    }
     nav {
       background: linear-gradient(
         to bottom,

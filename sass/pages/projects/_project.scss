@@ -1,27 +1,29 @@
 .project {
   grid-column: full-start / full-end;
   text-align: center;
-  margin-top: -12rem;
 
   &__container {
     display: flex;
     text-align: left;
+    @media screen and (max-width: $bp-large) {
+      flex-direction: column;
+    }
 
     &-left {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      img {
-        margin-top: 3rem;
-        border-radius: 40px;
-      }
     }
     &-right {
       flex: 1;
       display: flex;
       flex-direction: column;
       padding: 2.5rem;
+      padding-right: 18rem;
+      @media screen and (max-width: $bp-large) {
+        padding: 5rem 3rem;
+      }
     }
   }
   &__technologies {
@@ -71,6 +73,17 @@
     }
   }
 
+  img {
+    width: 50%;
+    margin-top: 3rem;
+    border-radius: 40px;
+  }
+
+  &__img {
+    width: 90% !important;
+    border-radius: 10px !important;
+  }
+
   h1 {
     margin-bottom: 4rem;
   }
@@ -82,5 +95,8 @@
   }
   p {
     margin-bottom: 1.8rem;
+  }
+  hr {
+    margin: 15rem auto;
   }
 }

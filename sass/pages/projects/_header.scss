@@ -3,20 +3,33 @@
     background: none;
 
     &__hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: -20rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(20rem, 40rem));
+      place-content: center;
+      justify-items: center;
 
       h1 {
         margin-bottom: 5rem;
+        grid-column: 1 / -1;
       }
     }
-    &__img {
-      width: 40rem;
-      @media screen and (max-width: $bp-small) {
-        width: 25rem;
+    .small-card {
+      padding: 0.5rem;
+      text-decoration: none;
+      background: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      color: $font-color-light;
+      transition: all 0.7s;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-primary-light;
+        background: linear-gradient(to right bottom, #fff, #ccc);
+        transform: scale(1.2);
+        box-shadow: $shadow-large;
       }
     }
     nav {

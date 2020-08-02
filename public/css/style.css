@@ -571,18 +571,25 @@ hr {
 .header-projects {
   background: none; }
   .header-projects__hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -20rem; }
+    display: grid;
+    grid-template-columns: repeat(3, minmax(20rem, 40rem));
+    place-content: center;
+    justify-items: center; }
     .header-projects__hero h1 {
-      margin-bottom: 5rem; }
-  .header-projects__img {
-    width: 40rem; }
-    @media screen and (max-width: 640px) {
-      .header-projects__img {
-        width: 25rem; } }
+      margin-bottom: 5rem;
+      grid-column: 1 / -1; }
+  .header-projects .small-card {
+    padding: 0.5rem;
+    text-decoration: none;
+    background: linear-gradient(to right bottom, #297eff, #6c63ff);
+    color: #eee;
+    transition: all 0.7s; }
+    .header-projects .small-card:hover {
+      cursor: pointer;
+      color: #297eff;
+      background: linear-gradient(to right bottom, #fff, #ccc);
+      transform: scale(1.2);
+      box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.5); }
   .header-projects nav {
     background: linear-gradient(to bottom, #297eff, #6c63ff); }
 

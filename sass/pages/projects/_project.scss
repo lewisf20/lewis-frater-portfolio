@@ -120,5 +120,7 @@
 
 #e-portfolio .project__container-right,
 #learning-package .project__container-right {
-  margin-top: -15rem;
+  @media screen and (max-width: $bp-small) {
+    margin-top: -15rem;
+  }
 }

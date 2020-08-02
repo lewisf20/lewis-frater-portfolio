@@ -312,7 +312,8 @@ hr {
 
 .container {
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  overflow-x: hidden; }
 
 .header {
   grid-column: full-start / full-end;
@@ -689,9 +690,10 @@ hr {
         height: 90%;
         width: 35%; } }
 
-#e-portfolio .project__container-right,
-#learning-package .project__container-right {
-  margin-top: -15rem; }
+@media screen and (max-width: 640px) {
+  #e-portfolio .project__container-right,
+  #learning-package .project__container-right {
+    margin-top: -15rem; } }
 
 .header-cv {
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 66%); }
@@ -942,6 +944,10 @@ hr {
   box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.25);
   padding: 2rem 0;
   animation: fazeIn 0.5s ease; }
+  @media screen and (max-width: 640px) {
+    .contact-form {
+      width: 35rem;
+      height: 60rem; } }
   .contact-form__container {
     display: flex;
     flex-direction: column;

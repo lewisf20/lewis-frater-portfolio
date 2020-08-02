@@ -8,6 +8,11 @@
   padding: 2rem 0;
   animation: fazeIn 0.5s ease;
 
+  @media screen and (max-width: $bp-small) {
+    width: 35rem;
+    height: 60rem;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;

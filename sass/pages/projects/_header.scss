@@ -1,6 +1,6 @@
 .header {
   &-projects {
-    background: none;
+    //background: none;
 
     &__hero {
       display: grid;
@@ -11,33 +11,33 @@
       h1 {
         margin-bottom: 5rem;
         grid-column: 1 / -1;
+        color: $font-color-light;
+      }
+      @media screen and (max-width: $bp-small) {
+        grid-template-columns: repeat(2, minmax(20rem, 40rem));
+        place-items: center;
+        place-content: center;
+        row-gap: 4rem;
       }
     }
     .small-card {
       padding: 0.5rem;
       text-decoration: none;
-      background: linear-gradient(
-        to right bottom,
-        $color-primary-light,
-        $color-primary-dark
-      );
-      color: $font-color-light;
+      color: $color-primary-light;
+      background: linear-gradient(to right bottom, #fff, #ccc);
       transition: all 0.7s;
 
       &:hover {
         cursor: pointer;
-        color: $color-primary-light;
-        background: linear-gradient(to right bottom, #fff, #ccc);
+        color: $font-color-light;
+        background: linear-gradient(
+          to right bottom,
+          $color-primary-light,
+          $color-primary-dark
+        );
         transform: scale(1.2);
         box-shadow: $shadow-large;
       }
-    }
-    nav {
-      background: linear-gradient(
-        to bottom,
-        $color-primary-light,
-        $color-primary-dark
-      );
     }
   }
 }

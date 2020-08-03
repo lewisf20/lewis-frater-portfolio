@@ -13,7 +13,11 @@
 .icon-cta {
   color: transparent;
   font-size: 6rem;
-  background-image: linear-gradient(to bottom, #fff, #bbb);
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
   letter-spacing: 0.5rem;
   background-clip: text;
   -webkit-background-clip: text;

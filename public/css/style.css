@@ -43,7 +43,7 @@ body {
 .icon-cta {
   color: transparent;
   font-size: 6rem;
-  background-image: linear-gradient(to bottom, #fff, #bbb);
+  background-image: linear-gradient(to bottom, #297eff, #6c63ff);
   letter-spacing: 0.5rem;
   background-clip: text;
   -webkit-background-clip: text; }
@@ -310,17 +310,20 @@ hr {
     align-items: center;
     width: 6rem;
     height: 6rem;
+    background-color: #297eff;
     clip-path: circle(50% at 50% 50%);
     transition: all 0.4s cubic-bezier(0.6, 1, 0.8, 1); }
     .nav__hamburger:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
       background-color: #fff;
       clip-path: circle(50% at 50% 50%); }
+      .nav__hamburger:hover .line {
+        background: #297eff; }
     .nav__hamburger .line {
       width: 35px;
       height: 5px;
       margin: 0 0 6px 0;
-      background: goldenrod;
+      background: #fff;
       transition: all 0.4s cubic-bezier(0.6, 1, 0.8, 1); }
       .nav__hamburger .line:last-child {
         margin-bottom: 0; }
@@ -369,6 +372,7 @@ hr {
     width: 100%;
     height: 30rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.4s cubic-bezier(0.6, 1, 0.8, 1);
@@ -376,7 +380,14 @@ hr {
     .mobile-menu__logo--active {
       transform: translate3d(0, 0, 0); }
     .mobile-menu__logo span {
-      font-size: 6rem; }
+      font-size: 6rem;
+      margin-top: 5vh; }
+    .mobile-menu__logo p {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #eee;
+      margin-top: auto;
+      padding-bottom: 1rem; }
 
 .container {
   display: grid;

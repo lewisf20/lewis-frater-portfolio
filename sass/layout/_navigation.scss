@@ -16,7 +16,7 @@
     align-items: center;
     list-style: none;
 
-    @media screen and (max-width: $bp-small) {
+    @media screen and (max-width: $bp-large) {
       display: none;
       position: relative;
     }
@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: $bp-small) {
+@media screen and (max-width: $bp-large) {
   .nav__hamburger {
     position: fixed;
     z-index: 200;

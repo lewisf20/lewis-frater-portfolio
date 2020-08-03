@@ -1,6 +1,5 @@
 .header {
   &-index {
-    //clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     grid-template-columns: 1fr 1fr;
     @media only screen and (max-width: 890px) {
       grid-template-rows: 10vh 45vh 45vh;

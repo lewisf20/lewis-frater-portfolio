@@ -261,7 +261,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     list-style: none; }
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1280px) {
       .nav__container {
         display: none;
         position: relative; } }
@@ -298,7 +298,7 @@ hr {
   .nav__hamburger {
     display: none; }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1280px) {
   .nav__hamburger {
     position: fixed;
     z-index: 200;

@@ -33,6 +33,9 @@ $shadow-large: 0 0.8rem 5rem
     $alpha: 0.5,
   );
 
+//timing function
+$timing-bezier: cubic-bezier(0.6, 1, 0.8, 1);
+
 // Breakpoints
 $bp-large: 1280px;
 $bp-medium: 768px;

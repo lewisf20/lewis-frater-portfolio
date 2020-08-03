@@ -1,5 +1,7 @@
 .header {
   &-cv {
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 66%);
+    //clip-path: polygon(0 0, 100% 0, 100% 33%, 0 66%);
+    grid-template-rows: 10vh;
+    margin-bottom: 20rem;
   }
 }

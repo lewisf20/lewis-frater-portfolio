@@ -573,9 +573,26 @@ hr {
     flex-wrap: wrap;
     justify-content: space-evenly; }
     .skills__core .card {
-      min-height: 38rem;
+      height: 38rem;
       margin: 3rem;
       flex: 0 1 30rem; }
+      .skills__core .card:hover {
+        transform: translateY(-1rem); }
+    .skills__core .card:nth-child(1):hover {
+      outline: 2.5rem solid #e34c26; }
+      .skills__core .card:nth-child(1):hover .card__icon {
+        transform: scale(1.5) translateY(-2rem);
+        color: #e34c26; }
+    .skills__core .card:nth-child(2):hover {
+      outline: 2.5rem solid #f0db4f; }
+      .skills__core .card:nth-child(2):hover .card__icon {
+        transform: scale(1.5) translateY(-2rem);
+        color: #f0db4f; }
+    .skills__core .card:nth-child(3):hover {
+      outline: 2.5rem solid #297eff; }
+      .skills__core .card:nth-child(3):hover .card__icon {
+        transform: scale(1.5) translateY(-2rem);
+        color: #297eff; }
   .skills__title {
     grid-column: 3 / 7;
     display: flex;
@@ -919,11 +936,13 @@ hr {
     box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.4); }
 
 .card {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
   align-items: center;
-  transition: 0.4s all ease-out;
+  transition: 0.4s all cubic-bezier(0.6, 1, 0.8, 1);
+  overflow: hidden;
   box-shadow: 0 0.8rem 5rem rgba(0, 0, 0, 0.5);
   background-color: #fff; }
   .card__title {
@@ -932,24 +951,20 @@ hr {
     justify-content: center;
     width: 100%;
     height: 7rem;
-    background-image: linear-gradient(to right, #297eff, #6c63ff);
+    background: #eee;
     text-align: center;
     font-size: 2.8rem;
-    color: #eee;
+    color: #3d3d3d;
     transition: all 1.2s; }
-  .card__content {
-    padding: 2rem;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: all 1.2s; }
+  .card__img {
+    width: 100%;
+    height: 100%; }
   .card__icon {
-    font-size: 8rem;
-    color: #297eff;
-    padding-bottom: 1rem;
-    transition: all 1.2s; }
-  .card:hover {
-    cursor: pointer;
-    transform: translateY(-1rem); }
+    position: absolute;
+    bottom: 20%;
+    font-size: 14rem;
+    color: #fff;
+    transition: all 0.5s; }
 
 .small-card {
   display: flex;

@@ -1,9 +1,11 @@
 .card {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
   align-items: center;
-  transition: 0.4s all ease-out;
+  transition: 0.4s all $timing-bezier;
+  overflow: hidden;
 
   box-shadow: $shadow-large;
   background-color: #fff;
@@ -14,43 +16,22 @@
     justify-content: center;
     width: 100%;
     height: 7rem;
-    background-image: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
+    background: #eee;
     text-align: center;
     font-size: 2.8rem;
-    color: $font-color-light;
+    color: $font-color-dark;
 
     transition: all 1.2s;
   }
-  &__content {
-    padding: 2rem;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: all 1.2s;
+  &__img {
+    width: 100%;
+    height: 100%;
   }
   &__icon {
-    font-size: 8rem;
-    color: $color-primary-light;
-    padding-bottom: 1rem;
-    transition: all 1.2s;
-  }
-
-  &:hover {
-    cursor: pointer;
-    transform: translateY(-1rem);
-    // transform: rotateY(180deg);
-
-    // .card__content {
-    //   opacity: 0;
-    // }
-    // .card__title {
-    //   opacity: 0;
-    // }
-    // .card__icon {
-    //   transform: translateY(-12rem) scale(3) rotateY(180deg);
-    // }
+    position: absolute;
+    bottom: 20%;
+    font-size: 14rem;
+    color: #fff;
+    transition: all 0.5s;
   }
 }

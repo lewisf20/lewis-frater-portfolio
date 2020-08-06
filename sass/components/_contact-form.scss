@@ -9,7 +9,7 @@
   animation: fazeIn 0.5s ease;
 
   @media screen and (max-width: $bp-small) {
-    width: 35rem;
+    width: 45rem;
     height: 60rem;
   }
 
@@ -56,6 +56,7 @@
         border: 3px solid $color-primary-light;
         border-radius: 10px;
         width: 100%;
+        outline: none;
       }
     }
     textarea {
@@ -63,6 +64,7 @@
       font-family: $font-primary;
       border-radius: 15px;
       padding: 1rem;
+      outline: none;
       width: 100%;
       height: 6rem;
       transition: 0.5s ease;

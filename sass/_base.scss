@@ -54,10 +54,15 @@ $bp-smallest: 400px;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+
   @media only screen and (max-width: $bp-medium) {
     font-size: 50%;
   }
-  scroll-behavior: smooth;
+  //media query for extra large screens
+  @media only screen and (min-width: 1921px) {
+    font-size: 100%;
+  }
 }
 
 body {

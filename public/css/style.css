@@ -276,9 +276,6 @@ hr {
     color: #eee;
     padding: 0.8rem;
     transition: all 0.5s; }
-  .nav__link--active {
-    text-transform: lowercase !important;
-    box-shadow: 0 10rem 8rem rgba(154, 183, 255, 0.3); }
   .nav__link:hover {
     box-shadow: 0 10rem 8rem rgba(154, 183, 255, 0.3); }
   .nav__link:before {
@@ -294,6 +291,16 @@ hr {
     transition: all 0.4s cubic-bezier(0.1, 0, 0, 0.5); }
   .nav__link:hover:before {
     transform: scaleX(1); }
+  .nav__link--active:before {
+    position: absolute;
+    content: '';
+    left: 9%;
+    bottom: 5px;
+    width: 85%;
+    height: 2px;
+    background-color: #9ab7ff;
+    transform: scaleX(1);
+    box-shadow: 0 10rem 8rem rgba(154, 183, 255, 0.3); }
   .nav__logo {
     margin-left: 15vw;
     cursor: pointer;
@@ -390,7 +397,8 @@ hr {
       font-weight: 500;
       color: #eee;
       margin-top: auto;
-      padding-bottom: 1rem; }
+      text-align: center;
+      padding: 2rem 1rem; }
 
 .container {
   display: grid;
@@ -469,6 +477,9 @@ hr {
   padding: 2rem 10rem; }
   .motivation-content__svg {
     width: 12rem; }
+    @media screen and (max-width: 640px) {
+      .motivation-content__svg {
+        width: 8rem; } }
   .motivation-content__btn,
   .motivation-content p {
     grid-column: 2 / span 2;
@@ -491,7 +502,7 @@ hr {
         margin-top: 1.5rem; } }
   @media screen and (max-width: 640px) {
     .motivation-content {
-      padding: 1rem 2.8rem; } }
+      padding: 1rem 0rem; } }
 
 .motivation-aside {
   grid-column: full-start / col-end 2;
@@ -522,6 +533,9 @@ hr {
   padding: 2rem 10rem; }
   .profile-content__svg {
     width: 12rem; }
+    @media screen and (max-width: 640px) {
+      .profile-content__svg {
+        width: 8rem; } }
   .profile-content__btn,
   .profile-content p {
     grid-column: 2 / span 2;
@@ -542,7 +556,7 @@ hr {
         margin-top: 1.5rem; } }
   @media screen and (max-width: 640px) {
     .profile-content {
-      padding: 1rem 2.8rem; } }
+      padding: 1rem 0rem; } }
 
 .profile-aside {
   grid-column: col-start 7 / full-end;

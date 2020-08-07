@@ -34,10 +34,6 @@
     transition: all 0.5s;
   }
 
-  &__link--active {
-    text-transform: lowercase !important;
-    box-shadow: 0 10rem 8rem rgba($color: $color-secondary, $alpha: 0.3);
-  }
   &__link:hover {
     box-shadow: 0 10rem 8rem rgba($color: $color-secondary, $alpha: 0.3);
   }
@@ -58,6 +54,19 @@
 
   &__link:hover:before {
     transform: scaleX(1);
+  }
+
+  &__link--active:before {
+    position: absolute;
+    content: '';
+    left: 9%;
+    bottom: 5px;
+    width: 85%;
+    height: 2px;
+    background-color: $color-secondary;
+    transform: scaleX(1);
+
+    box-shadow: 0 10rem 8rem rgba($color: $color-secondary, $alpha: 0.3);
   }
 
   &__logo {
@@ -192,7 +201,8 @@
       font-weight: 500;
       color: $font-color-light;
       margin-top: auto;
-      padding-bottom: 1rem;
+      text-align: center;
+      padding: 2rem 1rem;
     }
   }
 }

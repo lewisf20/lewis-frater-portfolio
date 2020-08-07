@@ -6,6 +6,9 @@
 
     &__svg {
       width: 12rem;
+      @media screen and (max-width: $bp-small) {
+        width: 8rem;
+      }
     }
 
     &__btn,
@@ -36,7 +39,7 @@
     }
 
     @media screen and (max-width: $bp-small) {
-      padding: 1rem 2.8rem;
+      padding: 1rem 0rem;
     }
   }
 

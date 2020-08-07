@@ -1,7 +1,5 @@
 .header {
   &-projects {
-    //background: none;
-
     &__hero {
       display: grid;
       grid-template-columns: repeat(3, minmax(20rem, 40rem));

@@ -735,8 +735,11 @@ hr {
       justify-content: center;
       align-items: flex-start;
       padding-top: 3rem;
-      width: 75rem;
+      flex: 1;
       height: 60rem; }
+      @media screen and (max-width: 1280px) {
+        .project__container-left {
+          margin-bottom: 10rem; } }
     .project__container-right {
       flex: 1;
       display: flex;
@@ -784,9 +787,6 @@ hr {
   .project__img {
     width: 90%;
     border-radius: 10px; }
-    @media screen and (max-width: 640px) {
-      .project__img {
-        width: 70%; } }
   .project img {
     box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.25); }
   .project h1 {
@@ -808,13 +808,7 @@ hr {
     border-radius: 40px; }
     @media screen and (max-width: 1280px) {
       #chittr img {
-        height: 90%;
-        width: 35%; } }
-
-@media screen and (max-width: 640px) {
-  #e-portfolio .project__container-right,
-  #learning-package .project__container-right {
-    margin-top: -15rem; } }
+        width: 40%; } }
 
 .header-cv {
   grid-template-rows: 10vh;

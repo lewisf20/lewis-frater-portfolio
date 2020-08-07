@@ -2,13 +2,13 @@
   "name": "lewis-frater-portfolio",
   "version": "1.0.0",
   "description": "This is my portfolio website",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss public/css/style.css -w",
     "devserver": "live-server --open=public --browser=firefox",
     "devstart": "npm-run-all --parallel devserver watch:sass",
-    "devnode": "nodemon ./server.js",
-    "start": "node server.js"
+    "devnode": "nodemon ./app.js",
+    "start": "node app.js"
   },
   "author": "Lewis Frater",
   "license": "ISC",

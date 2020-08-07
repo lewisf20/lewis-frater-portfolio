@@ -166,7 +166,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     list-style: none;
     font-size: 4rem;
@@ -176,12 +176,15 @@
     &--active {
       transform: translate3d(0, 0, 0);
     }
+    .nav__item:not(:last-child) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__logo {
     background-color: $color-secondary;
     width: 100%;
-    height: 30rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,7 +197,6 @@
     }
     span {
       font-size: 6rem;
-      margin-top: 5vh;
     }
     p {
       font-size: $font-size-large;

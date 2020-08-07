@@ -36,12 +36,11 @@
     }
   }
   &__date {
+    font-weight: 600;
+    text-decoration: underline;
   }
   &__title {
     text-align: center;
     margin-bottom: 6rem;
-  }
-  &__campus {
-    margin-top: -3rem;
   }
 }

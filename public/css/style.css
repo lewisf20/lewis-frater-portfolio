@@ -739,7 +739,7 @@ hr {
       height: 60rem; }
       @media screen and (max-width: 1280px) {
         .project__container-left {
-          margin-bottom: 10rem; } }
+          margin-bottom: 15rem; } }
     .project__container-right {
       flex: 1;
       display: flex;
@@ -806,9 +806,11 @@ hr {
     width: 40%;
     margin-top: 3rem;
     border-radius: 40px; }
-    @media screen and (max-width: 1280px) {
-      #chittr img {
-        width: 40%; } }
+
+@media screen and (max-width: 640px) {
+  #e-portfolio .project__container-right,
+  #learning-package .project__container-right {
+    margin-top: -15rem; } }
 
 .header-cv {
   grid-template-rows: 10vh;
@@ -864,11 +866,12 @@ hr {
     list-style: none; }
     .education__grades li {
       margin: 1.5rem 1rem; }
+  .education__date {
+    font-weight: 600;
+    text-decoration: underline; }
   .education__title {
     text-align: center;
     margin-bottom: 6rem; }
-  .education__campus {
-    margin-top: -3rem; }
 
 .key-skills {
   grid-column: center-start / center-end;

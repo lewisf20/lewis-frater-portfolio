@@ -12,6 +12,10 @@
     width: 45rem;
     height: 60rem;
   }
+  @media screen and (max-width: $bp-smallest) {
+    width: 35rem;
+    height: 50rem;
+  }
 
   &__container {
     display: flex;

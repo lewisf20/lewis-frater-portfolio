@@ -18,6 +18,9 @@
       padding-top: 3rem;
       flex: 1;
       height: 60rem;
+      @media screen and (max-width: $bp-small) {
+        height: 45rem;
+      }
     }
     &-right {
       flex: 1;
@@ -117,6 +120,6 @@
 #e-portfolio .project__container-right,
 #learning-package .project__container-right {
   @media screen and (max-width: $bp-small) {
-    margin-top: -15rem;
+    //margin-top: -15rem;
   }
 }

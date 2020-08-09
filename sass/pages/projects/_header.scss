@@ -16,6 +16,13 @@
         place-items: center;
         place-content: center;
         row-gap: 4rem;
+        column-gap: 2rem;
+      }
+      @media screen and (max-width: $bp-smallest) {
+        grid-template-columns: repeat(1, minmax(20rem, 40rem));
+        place-items: center;
+        place-content: center;
+        row-gap: 4rem;
       }
     }
     .small-card {

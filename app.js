@@ -85,7 +85,7 @@ app.post('/send', async (req, res) => {
     console.log('Message sent: %s', info.messageId);
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-    res.render('contact', { msg: 'Your email has been sent' });
+    res.render('contact', { msg: 'Thank you, Email sent!' });
   });
 });
 

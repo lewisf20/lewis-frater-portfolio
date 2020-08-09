@@ -57,58 +57,10 @@
           </li>
         </ul>
       </nav>
-      <div class="header-contact__container">
-        <div class="header-contact__title">
-          <h1 class="heading-cta">Contact me</h1>
-        </div>
-        <div class="header-contact__content">
-          <img
-            src="res/contact-l.svg"
-            alt="Person throwing paper airplane as email"
-            class="header-contact__img"
-          />
-
-          <form action="send" method="POST" class="contact-form">
-            <div class="contact-form__container">
-              <div class="contact-form__box">
-                <label for="name">Full Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-
-              <div class="contact-form__box">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
-              </div>
-
-              <div class="contact-form__box">
-                <label for="message">Your message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                id="submit"
-                class="contact-form__btn btn-dark"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-
-          <img
-            src="res/contact-l.svg"
-            alt="Image showing contact related icons"
-            class="header-contact__img"
-          />
-        </div>
-      </div>
+      {{{body}}}
     </header>
-    <section class="social">
+    
+        <section class="social">
       <h2 class="social__title">Socials</h2>
       <a href="https://twitter.com/lewiscf95" id="social__link" target="_blank">
         <span class="u-bold">Twitter</span>

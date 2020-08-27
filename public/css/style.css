@@ -322,8 +322,8 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: #297eff;
     clip-path: circle(50% at 50% 50%);
     transition: all 0.4s cubic-bezier(0.6, 1, 0.8, 1); }
@@ -356,7 +356,7 @@ hr {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #297eff, #6c63ff);
+  background: #297eff;
   z-index: 100;
   display: flex;
   flex-direction: column-reverse;
@@ -376,7 +376,7 @@ hr {
     justify-content: center;
     align-items: center;
     list-style: none;
-    font-size: 4rem;
+    font-size: 3rem;
     transform: translate3d(0, -100%, 0);
     transition: all 0.4s cubic-bezier(0.6, 1, 0.8, 1); }
     .mobile-menu__list--active {
@@ -384,9 +384,9 @@ hr {
     .mobile-menu__list .nav__item:not(:last-child) {
       margin-bottom: 4rem; }
   .mobile-menu__logo {
-    background-color: #9ab7ff;
+    background-color: #6c63ff;
     width: 100%;
-    height: 15rem;
+    height: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -396,7 +396,8 @@ hr {
     .mobile-menu__logo--active {
       transform: translate3d(0, 0, 0); }
     .mobile-menu__logo span {
-      font-size: 6rem; }
+      font-size: 5rem;
+      padding-top: 3rem; }
     .mobile-menu__logo p {
       font-size: 2rem;
       font-weight: 500;
@@ -784,18 +785,6 @@ hr {
       align-items: center; }
   .project__buttons-wrapper .view-btn:nth-child(1) {
     margin-right: 8vw; }
-  .project .view-btn:link,
-  .project .view-btn:visited {
-    position: relative;
-    color: #297eff;
-    font-size: 1.6rem;
-    text-decoration: none;
-    align-self: flex-end;
-    transition: 0.2s; }
-    .project .view-btn:link:hover,
-    .project .view-btn:visited:hover {
-      color: #6c63ff;
-      font-weight: 500; }
   .project__img {
     width: 90%;
     border-radius: 10px; }
@@ -818,6 +807,21 @@ hr {
     width: 40%;
     margin-top: 3rem;
     border-radius: 40px; }
+
+.view-btn:link,
+.view-btn:visited {
+  display: inline-block;
+  position: relative;
+  color: #297eff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  align-self: flex-end;
+  transition: 0.2s; }
+  .view-btn:link:hover,
+  .view-btn:visited:hover {
+    color: #6c63ff;
+    font-weight: bold;
+    transform: scale(1.05) translateX(1rem); }
 
 .header-cv {
   grid-template-rows: 10vh;
@@ -977,10 +981,10 @@ hr {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 7rem;
     background: #eee;
     text-align: center;
     font-size: 2.8rem;
+    padding: 1.5rem 0;
     color: #3d3d3d;
     transition: all 1.2s; }
   .card__img {

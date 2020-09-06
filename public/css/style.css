@@ -437,6 +437,9 @@ hr {
     .header-index__content-main {
       width: 52rem;
       height: 15rem; }
+      @media screen and (max-width: 400px) {
+        .header-index__content-main {
+          width: 40rem; } }
     @media only screen and (max-width: 890px) {
       .header-index__content {
         align-items: center;
@@ -455,11 +458,17 @@ hr {
     font-size: 5.5rem;
     letter-spacing: 0.6rem;
     margin-bottom: 0.5rem; }
+    @media screen and (max-width: 400px) {
+      .header-index__content-title {
+        font-size: 4rem; } }
   .header-index__content-role {
     color: #eee;
     font-size: 4rem;
     letter-spacing: 0.3rem;
     font-weight: 200; }
+    @media screen and (max-width: 400px) {
+      .header-index__content-role {
+        font-size: 3rem; } }
   .header-index__content-btn {
     margin-top: 2.4rem;
     animation: moveInBottom 2s ease-out 0s; }

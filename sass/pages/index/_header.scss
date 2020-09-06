@@ -1,74 +1,65 @@
 .header {
-  &-index {
-    grid-template-columns: 1fr 1fr;
-    @media only screen and (max-width: 890px) {
-      grid-template-rows: 10vh 45vh 45vh;
-    }
-    @media screen and (max-width: $bp-small) {
-      grid-template-rows: 10vh 90vh;
-    }
+	&-index {
+		grid-template-columns: 1fr 1fr;
+		@media only screen and (max-width: 890px) {
+			grid-template-rows: 10vh 45vh 45vh;
+		}
+		@media screen and (max-width: $bp-small) {
+			grid-template-rows: 10vh 90vh;
+		}
 
-    &__content {
-      grid-column: 1 / 1;
-      position: relative;
-      top: -7rem;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: start;
-      margin-left: 2rem;
+		&__content {
+			grid-column: 1 / 3;
+			grid-row: 2 / 4;
+			position: relative;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
 
-      @media only screen and (max-width: 890px) {
-        grid-column: 1 / 3;
-        align-items: flex-end;
-        top: 0;
-      }
-      @media screen and (max-width: $bp-small) {
-        align-items: center;
-      }
-    }
-    &__content-box {
-      @media only screen and (max-width: 890px) {
-        text-align: center;
-        margin-bottom: 10rem;
-      }
-    }
-    &__content-title {
-      color: $font-color-light;
-      font-size: 5.5rem;
-      letter-spacing: 0.6rem;
-      margin-bottom: 0.5rem;
-      animation: land 2s ease-in 0s;
-    }
-    &__content-role {
-      color: $font-color-light;
-      font-size: 4rem;
-      letter-spacing: 0.3rem;
-      font-weight: 200;
-      animation: blurIn 4s ease-out 0s;
-    }
-    &__content-btn {
-      margin-top: 2.4rem;
-      animation: moveInLeft 2s ease-out 0s;
-    }
+			&-main {
+				width: 52rem;
+				height: 15rem;
+			}
 
-    &__img-container {
-      height: 100%;
-      display: flex;
-      position: relative;
-      @media only screen and (max-width: 890px) {
-        grid-column: 1 / -1;
-      }
-      @media screen and (max-width: $bp-small) {
-        display: none;
-      }
-    }
+			@media only screen and (max-width: 890px) {
+				align-items: center;
+				top: 0;
+			}
+			@media screen and (max-width: $bp-small) {
+				align-items: center;
+			}
+		}
+		&__content-box {
+			z-index: 1;
+			@media only screen and (max-width: 890px) {
+				text-align: center;
+				margin-bottom: 10rem;
+			}
+		}
+		&__content-title {
+			color: $font-color-light;
+			font-size: 5.5rem;
+			letter-spacing: 0.6rem;
+			margin-bottom: 0.5rem;
+		}
+		&__content-role {
+			color: $font-color-light;
+			font-size: 4rem;
+			letter-spacing: 0.3rem;
+			font-weight: 200;
+		}
+		&__content-btn {
+			margin-top: 2.4rem;
+			animation: moveInBottom 2s ease-out 0s;
+		}
+	}
+}
 
-    &__img-main {
-      position: relative;
-      width: 100%;
-      animation: moveInBottom 3s ease-out 0s;
-    }
-  }
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
 }
